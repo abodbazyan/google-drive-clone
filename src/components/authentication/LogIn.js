@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react"
 import { Card, Button, Form, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
+import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import CenteredContainer from "./CenteredContainer"
 
 export default function LogIn() {
   const emailRef = useRef()
@@ -27,7 +28,7 @@ export default function LogIn() {
   }
 
   return (
-    <>
+    <CenteredContainer>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
@@ -53,6 +54,6 @@ export default function LogIn() {
       <div className="w-100 text-center mt-2">
         Don't have an account? <Link to="/signup">Create One</Link>
       </div>
-    </>
+    </CenteredContainer>
   )
 }
